@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     color: #333; /* 主要文字顏色 */
     background-color: #f8f8f8; /* 網站背景淺灰色 */
+    scroll-behavior: smooth; /* 捲動動畫效果 */
 }
 
 /* 2. Header (導航欄) */
@@ -105,7 +106,6 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    text-align: center;
 }
 
 /* 7. Card Style (卡片樣式) */
@@ -116,6 +116,7 @@ nav a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 提升立體感 */
     transition: box-shadow 0.3s;
     text-align: left;
+    background-color: white;
 }
 
 .card:hover {
@@ -139,10 +140,6 @@ nav a:hover {
     margin-bottom: 10px;
     color: #555;
 }
-
-.status-green { color: #28a745; } /* 充足 */
-.status-yellow { color: #ffc107; } /* 少量 */
-.status-red { color: red; } /* 額滿 */
 
 /* 9. Contact Section */
 #contact .cta-button {
