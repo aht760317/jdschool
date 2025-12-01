@@ -17,12 +17,14 @@
         .features-grid, .branches-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; text-align: center; }
         .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); background-color: white; text-align: left; }
         .card h3 { color: #004d99; margin-top: 0; }
-        .cta-button { background-color: #ff6600; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px; text-align: center;}
+        .cta-button { color: white; padding: 10px 15px; font-weight: 700; text-decoration: none; border-radius: 5px; display: inline-block; text-align: center; transition: opacity 0.2s;}
         .status-green { color: green; font-weight: bold; }
         .status-yellow { color: orange; font-weight: bold; }
         .status-red { color: red; font-weight: bold; }
         .card ul { list-style: none; padding: 0; }
         .card ul li { margin-bottom: 8px; color: #555; }
+        .dual-buttons { display: flex; justify-content: space-between; margin-top: 20px; } /* 新增雙按鈕容器樣式 */
+        .dual-buttons .cta-button { width: 48%; margin: 0; font-size: 0.9em; background-color: #ff6600; } /* 調整卡片內按鈕尺寸 */
     </style>
 </head>
 <body>
@@ -41,7 +43,7 @@
         <h1>至德補習班：用精準教學，成就孩子的卓越未來！</h1>
         <p>嘉義 雲林地區國小安親課輔專家，提供 <strong>頂尖文理師資</strong> ✖️ <strong>獨家系統化教材</strong>，陪伴孩子穩固基礎。</p>
         <a href="#branches" class="cta-button" style="background-color: #e60000;">🔥 立即查看六大據點資訊</a>
-        <a href="#contact" class="cta-button">預約免費課程試聽</a>
+        <a href="#contact" class="cta-button" style="background-color: #ff6600;">預約免費課程試聽</a>
     </div>
 
     <section id="features" class="section">
@@ -75,42 +77,60 @@
                 <h3>民雄分校</h3>
                 <p><strong>電話：05-2269533</strong></p>
                 <p>地址：嘉義縣民雄鄉民族路 42 號</p>
-                <a href="tel:052269533" class="cta-button">📞 立即致電諮詢</a>
+                <div class="dual-buttons">
+                    <a href="tel:052269533" class="cta-button">📞 致電諮詢</a>
+                    <a href="【請填寫您的LINE官方連結】" class="cta-button" style="background-color: #00b900;">💬 LINE 洽詢</a>
+                </div>
             </div>
 
             <div class="card">
                 <h3>興嘉分校</h3>
                 <p><strong>電話：05-2865558</strong></p>
                 <p>地址：嘉義市西區溫州一街 97 號</p>
-                <a href="tel:052865558" class="cta-button">📞 立即致電諮詢</a>
+                <div class="dual-buttons">
+                    <a href="tel:052865558" class="cta-button">📞 致電諮詢</a>
+                    <a href="【請填寫您的LINE官方連結】" class="cta-button" style="background-color: #00b900;">💬 LINE 洽詢</a>
+                </div>
             </div>
 
             <div class="card">
                 <h3>僑平分校</h3>
                 <p><strong>電話：05-2331588</strong></p>
                 <p>地址：嘉義市西區德惠街 17 號</p>
-                <a href="tel:052331588" class="cta-button" style="background-color: #4a4a4a;">預約候補/洽詢</a>
+                <div class="dual-buttons">
+                    <a href="tel:052331588" class="cta-button" style="background-color: #ff6600;">📞 致電諮詢</a>
+                    <a href="【請填寫您的LINE官方連結】" class="cta-button" style="background-color: #00b900;">💬 LINE 洽詢</a>
+                </div>
             </div>
 
             <div class="card">
                 <h3>世界美語分校</h3>
-                <p><strong>聯絡方式：請使用線上表單</strong></p>
-                <p>地址：嘉義市東區民國路 279 號</p>
-                <a href="#contact" class="cta-button">💬 線上洽詢課程</a>
+                <p><strong>電話：05-2781880</strong></p>
+                <p>地址：嘉義市東區民國路 219 號</p>
+                <div class="dual-buttons">
+                    <a href="tel:052781880" class="cta-button">📞 致電諮詢</a>
+                    <a href="【請填寫您的LINE官方連結】" class="cta-button" style="background-color: #00b900;">💬 LINE 洽詢</a>
+                </div>
             </div>
             
             <div class="card">
                 <h3>斗六顧德旗艦校</h3>
                 <p><strong>電話：05-5329189</strong></p>
                 <p>地址：斗六市長春路 1 號</p>
-                <a href="tel:055329189" class="cta-button">📞 立即致電諮詢</a>
+                <div class="dual-buttons">
+                    <a href="tel:055329189" class="cta-button">📞 致電諮詢</a>
+                    <a href="【請填寫您的LINE官方連結】" class="cta-button" style="background-color: #00b900;">💬 LINE 洽詢</a>
+                </div>
             </div>
              
             <div class="card">
                 <h3>斗六至德鎮南校</h3>
                 <p><strong>電話：05-5350530</strong></p>
                 <p>地址：斗六市大智街 28 號</p>
-                <a href="tel:055350530" class="cta-button">📞 立即致電諮詢</a>
+                <div class="dual-buttons">
+                    <a href="tel:055350530" class="cta-button">📞 致電諮詢</a>
+                    <a href="【請填寫您的LINE官方連結】" class="cta-button" style="background-color: #00b900;">💬 LINE 洽詢</a>
+                </div>
             </div>
         </div>
         <p style="text-align: center; margin-top: 30px; font-size: 0.9em;">**實際開課與空位狀態，請直接聯繫各分校。**</p>
@@ -162,7 +182,7 @@
             </div>
         </div>
 
-        <p style="text-align: center; margin-top: 30px;"><a href="#contact" class="cta-button">立即洽詢各班別開課時間</a></p>
+        <p style="text-align: center; margin-top: 30px;"><a href="#contact" class="cta-button" style="background-color: #ff6600;">立即洽詢各班別開課時間</a></p>
     </section>
 
     <section id="contact" class="section">
@@ -170,7 +190,7 @@
         <p style="text-align: center;">立即加入官方 LINE 或撥打電話，讓我們為您的孩子規劃最適合的學習藍圖。</p>
         <div style="text-align: center;">
             <a href="【請填寫您的LINE官方連結】" class="cta-button" style="background-color: #00b900;">✅ 加入官方 LINE 帳號</a>
-            <a href="tel:【請填寫您的總校諮詢電話】" class="cta-button">☎️ 總校諮詢專線</a>
+            <a href="tel:【請填寫您的總校諮詢電話】" class="cta-button" style="background-color: #ff6600;">☎️ 總校諮詢專線</a>
         </div>
     </section>
 
