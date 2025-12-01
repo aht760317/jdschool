@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>至德補習班 | 國小安親課輔專家，成就卓越未來</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* 基礎樣式，讓網站在未加裝 CSS 時也能正常閱讀。建議使用專業 CSS 覆蓋。 */
+        body { font-family: "Microsoft JhengHei", Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #ffffff; }
+        header { background-color: #004d99; color: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5em; font-weight: bold; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        .hero { background-color: #f4f4f4; text-align: center; padding: 80px 20px; }
+        .hero h1 { font-size: 2.5em; color: #004d99; }
+        .section { padding: 40px 5%; margin-bottom: 20px; }
+        .features-grid, .branches-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; text-align: center; }
+        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); background-color: white; text-align: left; }
+        .card h3 { color: #004d99; margin-top: 0; }
+        .cta-button { background-color: #ff6600; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px; text-align: center;}
+        .cta-button:hover { opacity: 0.9; }
+        .status-green { color: green; font-weight: bold; }
+        .status-yellow { color: orange; font-weight: bold; }
+        .status-red { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">至德補習班</div>
+        <nav>
+            <a href="#features">至德特色</a>
+            <a href="#courses">課程體系</a>
+            <a href="#branches">分校據點查詢</a>
+            <a href="#contact">聯絡我們</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>至德補習班：用精準教學，成就孩子的卓越未來！</h1>
+        <p>嘉義地區國小安親課輔專家，提供 <strong>頂尖文理師資</strong> ✖️ <strong>獨家系統化教材</strong>，陪伴孩子穩固基礎。</p>
+        <a href="#branches" class="cta-button" style="background-color: #e60000;">🔥 立即查看六大據點資訊</a>
+        <a href="#contact" class="cta-button">預約免費課程試聽</a>
+    </div>
+
+    <section id="features" class="section">
+        <h2 style="text-align: center;">至德補習班：國小課後教育專家</h2>
+        <div class="features-grid">
+            <div class="card" style="text-align: center;">
+                <h3>🏠 安親課輔，全心照護</h3>
+                <p>專為雙薪家庭打造的安心環境，提供專車接送、作業指導，並管理生活常規與品格教育。</p>
+            </div>
+            <div class="card" style="text-align: center;">
+                <h3>🔢 數學邏輯啟發班</h3>
+                <p>不只教計算，更著重數感與邏輯思維的建立，為國中數學打下最扎實的基礎，讓孩子愛上數學。</p>
+            </div>
+            <div class="card" style="text-align: center;">
+                <h3>🇬🇧 沉浸式英文教學</h3>
+                <p>採用活潑教材，從發音、繪本到會話，讓孩子在無壓力環境下快樂學習英文，奠定語文基礎。</p>
+            </div>
+            <div class="card" style="text-align: center;">
+                <h3>🔬 自然科學興趣班</h3>
+                <p>透過趣味實驗與觀察，啟發孩子對自然科學的好奇心，從小培養科學素養，學習充滿樂趣。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="branches" class="section">
+        <h2 style="text-align: center;">🏫 我們的據點：至德補習班六間分校資訊</h2>
+        <p style="text-align: center;">就近選擇，享受至德統一的高品質國小教學！請聯繫各分校以查詢最新開班資訊。</p>
+        <div class="branches-grid">
+            
+            <div class="card">
+                <h3>民雄分校 (優文理)</h3>
+                <p><strong>電話：05-2269533</strong></p>
+                <p>地址：嘉義縣民雄鄉民族路 42 號</p>
+                <p class="status-green">課程重點：國小安親課輔、基礎文理</p>
+                <a href="tel:052269533" class="cta-button">📞 立即致電諮詢</a>
+            </div>
+
+            <div class="card">
+                <h3>興嘉分校 (菁英文理)</h3>
+                <p><strong>電話：05-2865558</strong></p>
+                <p>地址：嘉義市西區溫州一街 97 號</p>
+                <p class="status-yellow">課程重點：國小數學邏輯專精</p>
+                <a href="tel:052865558" class="cta-button">📞 立即致電諮詢</a>
+            </div>
+
+            <div class="card">
+                <h3>僑平分校 (文理)</h3>
+                <p><strong>電話：05-2331588</strong></p>
+                <p>地址：嘉義市西區德惠街 17 號</p>
+                <p class="status-red">課程重點：國小高年級課後指導</p>
+                <a href="tel:052331588" class="cta-button" style="background-color: #4a4a4a;">預約候補/洽詢</a>
+            </div>
+
+            <div class="card">
+                <h3>世界美語分校 (英語)</h3>
+                <p><strong>聯絡方式：請使用線上表單</strong></p>
+                <p>地址：嘉義市東區民國路 279 號</p>
+                <p class="status-yellow">課程重點：國小美語與自然專班</p>
+                <a href="#contact" class="cta-button">💬 線上洽詢課程</a>
+            </div>
+            
+            <div class="card">
+                <h3>斗六長春分校</h3>
+                <p><strong>電話：05-5329189</strong></p>
+                <p>地址：斗六市長春路 1 號</p>
+                <p class="status-green">課程重點：斗六地區國小全科</p>
+                <a href="tel:055329189" class="cta-button">📞 立即致電諮詢</a>
+            </div>
+             
+            <div class="card">
+                <h3>斗六至德鎮南校</h3>
+                <p><strong>電話：05-5350530</strong></p>
+                <p>地址：斗六市大智街 28 號</p>
+                <p class="status-green">課程重點：鄰近學區安親服務</p>
+                <a href="tel:055350530" class="cta-button">📞 立即致電諮詢</a>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 30px; font-size: 0.9em;">**分校列表為固定資訊。實際開課與空位狀態，請直接聯繫各分校。**</p>
+    </section>
+
+    <section id="courses" class="section" style="background-color: #f4f4f4;">
+        <h2 style="text-align: center;">📚 國小課程體系：扎根基礎，快樂學習</h2>
+        <p style="text-align: center;">至德針對國小學童設計完整學習方案，讓孩子在每個學科都能取得領先。</p>
+        
+        <div class="features-grid">
+            <div class="card">
+                <h3 style="color: #004d99;">安親課輔班 (全方位照護)</h3>
+                <ul>
+                    <li>✅ 學校作業檢查與精準指導</li>
+                    <li>✅ 國小放學專車接送服務 (限指定學區)</li>
+                    <li>✅ 養成良好讀書習慣與品格教育</li>
+                    <li>✅ 弱科加強與考前重點複習</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 style="color: #004d99;">數學與自然專精班</h3>
+                <ul>
+                    <li>✅ 國小數學資優培訓班</li>
+                    <li>✅ 數學應用題與邏輯解題技巧</li>
+                    <li>✅ 自然科學實驗與觀察課程</li>
+                    <li>✅ 銜接國中先修課程，無縫接軌</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 style="color: #004d99;">菁英英文班</h3>
+                <ul>
+                    <li>✅ 國小英文發音與會話班</li>
+                    <li>✅ 字母拼讀 (Phonics) 課程</li>
+                    <li>✅ 英文繪本閱讀與寫作啟蒙</li>
+                    <li>✅ 奠定未來國中英語文法基礎</li>
+                </ul>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 30px;"><a href="#contact" class="cta-button">立即洽詢各班別開課時間</a></p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 style="text-align: center;">📞 聯絡我們 / 預約諮詢</h2>
+        <p style="text-align: center;">立即加入官方 LINE 或撥打電話，讓我們為您的孩子規劃最適合的學習藍圖。</p>
+        <div style="text-align: center;">
+            <a href="【請填寫您的LINE官方連結】" class="cta-button" style="background-color: #00b900;">✅ 加入官方 LINE 帳號</a>
+            <a href="tel:【請填寫您的總校諮詢電話】" class="cta-button">☎️ 總校諮詢專線</a>
+        </div>
+    </section>
+
+    <footer>
+        <p style="text-align: center; padding: 20px; font-size: 0.8em; color: #666;">© 2024 至德補習班 All Rights Reserved. 嘉義、斗六國小安親課輔專家。</p>
+    </footer>
+
+</body>
+</html>
