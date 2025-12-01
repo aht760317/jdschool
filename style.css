@@ -1,0 +1,171 @@
+/* ======================================= */
+/* 至德補習班網站 - 專業 CSS 樣式表 */
+/* ======================================= */
+
+/* 1. 全域設定與字體 */
+body {
+    font-family: "Microsoft JhengHei", Arial, sans-serif; /* 確保中文字體清晰 */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333; /* 主要文字顏色 */
+    background-color: #f8f8f8; /* 網站背景淺灰色 */
+}
+
+/* 2. Header (導航欄) */
+header {
+    background-color: #004d99; /* 至德主要品牌藍色 */
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 底部陰影 */
+    position: sticky; /* 固定在頂部 */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.6em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: white;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700; /* 滑鼠懸停時變為亮黃色 */
+}
+
+/* 3. Hero Section (首頁橫幅) */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #e0f2ff, #f4f4f4); /* 淺藍色漸變背景 */
+}
+
+.hero h1 {
+    font-size: 3em;
+    color: #004d99;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* 4. Sections (區塊通用設定) */
+.section {
+    padding: 60px 5%;
+    margin-bottom: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #004d99;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #ffd700; /* 黃色底線強調 */
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+/* 5. CTA Button (行動呼籲按鈕) */
+.cta-button {
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.2s, background-color 0.3s;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 6. Grid Layouts (網格佈局) */
+.features-grid, .branches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+/* 7. Card Style (卡片樣式) */
+.card {
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 提升立體感 */
+    transition: box-shadow 0.3s;
+    text-align: left;
+}
+
+.card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* 懸停效果 */
+}
+
+.card h3 {
+    color: #004d99;
+    font-size: 1.3em;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/* 8. Course & Branch Specifics */
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.status-green { color: #28a745; } /* 充足 */
+.status-yellow { color: #ffc107; } /* 少量 */
+.status-red { color: red; } /* 額滿 */
+
+/* 9. Contact Section */
+#contact .cta-button {
+    margin: 10px 15px;
+}
+
+/* 10. Footer (頁尾) */
+footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* 11. 響應式設計 (RWD - 確保手機瀏覽正常) */
+@media (max-width: 768px) {
+    header { flex-direction: column; }
+    nav { margin-top: 10px; }
+    nav a { margin: 0 10px; display: inline-block; padding: 5px 0; }
+    .hero h1 { font-size: 2em; }
+    .hero { padding: 80px 10px; }
+    .features-grid, .branches-grid {
+        grid-template-columns: 1fr; /* 手機上變為單欄 */
+    }
+}
