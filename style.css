@@ -1,5 +1,5 @@
 /* ======================================= */
-/* 至德補習班網站 - 最終淡雅 Header CSS 樣式表 */
+/* 至德補習班網站 - 最終深灰 Hero CSS 樣式表 */
 /* ======================================= */
 
 /* 1. 全域設定與字體 */
@@ -13,7 +13,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* 2. Header (導航欄) - *** 已依要求修正為淡雅藍色 *** */
+/* 2. Header (導航欄) */
 header {
     background-color: #f7fbfc; /* 極淺淡藍白色 */
     color: #004d99; /* 將文字顏色改為品牌深藍色，確保可讀性 */
@@ -51,25 +51,24 @@ nav a:hover {
     color: #ff6600; /* 懸停改為橘色 accent */
 }
 
-/* 3. Hero Section (首頁橫幅) */
+/* 3. Hero Section (首頁橫幅) - *** 已改成深灰色 *** */
 .hero {
     text-align: center;
     padding: 120px 20px; 
-    /* 保持豐富的藍色漸變 */
-    background: linear-gradient(135deg, #022c5e, #004d99, #36a2eb); 
+    background-color: #3a3a3a; /* 深灰色 */
     color: white;
 }
 
 .hero h1 {
     font-size: 3.5em; 
-    color: #ffffff;
+    color: #ffffff; /* 標題改為白色 */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 1.4em;
-    color: #fff;
+    color: #fff; /* 內文改為白色 */
     font-weight: 300;
     margin-bottom: 40px;
 }
