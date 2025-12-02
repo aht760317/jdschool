@@ -28,17 +28,17 @@
         .dual-buttons .cta-button { width: 48%; margin: 0; font-size: 0.9em; background-color: #ff6600; } /* 調整卡片內按鈕尺寸 */
         
         /* 圖片樣式 (CSS 應該寫在 style.css 中，此處為確保圖片能顯示的內嵌樣式) */
-        .card.feature-card { 
-            padding: 0; 
-            overflow: hidden; 
+        .card.feature-card { /* 應用於特色區塊的卡片 */
+            padding: 0; /* 移除內邊距，讓圖片緊貼邊緣 */
+            overflow: hidden; /* 確保圖片不溢出 */
             text-align: left;
         }
         .feature-icon {
             width: 100%;
             height: auto;
-            max-height: 180px; 
+            max-height: 180px; /* 限制圖片高度 */
             object-fit: cover;
-            border-radius: 8px 8px 0 0; 
+            border-radius: 8px 8px 0 0; /* 圖片頂部圓角與卡片一致 */
             margin-bottom: 15px;
         }
         .card.feature-card h3, .card.feature-card p {
@@ -71,7 +71,7 @@
     <div class="hero">
         <h1>至德補習班：用精準教學，成就孩子的卓越未來！</h1>
         <p>嘉義 雲林地區國小安親課輔專家，提供 <strong>頂尖文理師資</strong> ✖️ <strong>獨家系統化教材</strong>，陪伴孩子穩固基礎。</p>
-        <a href="#branches" class="cta-button" style="background-color: #e60000;">🔥 立即查看六大據點資訊</a>
+        <a href="#branches" class="cta-button" style="background-color: #e60000;">🔥 查看各分校據點資訊</a>
         <a href="#contact" class="cta-button" style="background-color: #ff6600;">預約免費課程試聽</a>
     </div>
 
