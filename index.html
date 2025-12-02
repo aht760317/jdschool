@@ -27,10 +27,10 @@
         .dual-buttons { display: flex; justify-content: space-between; margin-top: 20px; } /* 新增雙按鈕容器樣式 */
         .dual-buttons .cta-button { width: 48%; margin: 0; font-size: 0.9em; background-color: #ff6600; } /* 調整卡片內按鈕尺寸 */
         
-        /* 圖片樣式 */
+        /* 圖片樣式 (CSS 應該寫在 style.css 中，此處為確保圖片能顯示的內嵌樣式) */
         .card.feature-card { /* 應用於特色區塊的卡片 */
-            padding: 0; 
-            overflow: hidden; 
+            padding: 0; /* 移除內邊距，讓圖片緊貼邊緣 */
+            overflow: hidden; /* 確保圖片不溢出 */
             text-align: left;
         }
         .feature-icon {
@@ -38,7 +38,7 @@
             height: auto;
             max-height: 180px; /* 限制圖片高度 */
             object-fit: cover;
-            border-radius: 8px 8px 0 0; 
+            border-radius: 8px 8px 0 0; /* 圖片頂部圓角與卡片一致 */
             margin-bottom: 15px;
         }
         .card.feature-card h3, .card.feature-card p {
@@ -136,6 +136,15 @@
         </div>
     </section>
 
+    <section id="camp" class="section" style="background-color: #f0f0f0; border-top: 5px solid #004d99; text-align: center;">
+        <h2 style="color: #FF6600; border-bottom-color: #004d99; margin-bottom: 20px;">🔥 寒暑假營隊最新資訊 (熱烈報名中！)</h2>
+        <p style="font-size: 1.2em; margin-bottom: 25px;">
+            利用寒暑假，提供最專業的學科先修與多元探索營隊。<br>
+            名額有限，請盡早預約諮詢，為孩子規劃一個充實的假期！
+        </p>
+        <a href="camp_schedule.html" class="cta-button" style="background-color: #e60000; margin-top: 20px;">2026寒假冬令營時間表與課程</a>
+    </section>
+
     <section id="courses" class="section" style="background-color: #f4f4f4;">
         <h2 style="text-align: center;">📚 國小課程體系：扎根基礎，快樂學習</h2>
         <p style="text-align: center; font-weight: bold; font-size: 1.1em; color: #ff6600;">家長的第一選擇 - 至德補習班</p>
@@ -186,15 +195,6 @@
         <p style="text-align: center; margin-top: 30px;"><a href="#contact" class="cta-button" style="background-color: #ff6600;">立即洽詢各班別開課時間</a></p>
     </section>
     
-    <section id="camp" class="section" style="background-color: #f0f0f0; border-top: 5px solid #004d99; text-align: center;">
-        <h2 style="color: #FF6600; border-bottom-color: #004d99; margin-bottom: 20px;">🔥 寒暑假營隊最新資訊 (熱烈報名中！)</h2>
-        <p style="font-size: 1.2em; margin-bottom: 25px;">
-            利用寒暑假，提供最專業的學科先修與多元探索營隊。<br>
-            名額有限，請盡早預約諮詢，為孩子規劃一個充實的假期！
-        </p>
-        <a href="camp_schedule.html" class="cta-button" style="background-color: #e60000; margin-top: 20px;">2026寒假冬令營時間表與課程</a>
-    </section>
-
     <section id="branches" class="section">
         <h2 style="text-align: center;">🏫 我們的據點：至德補習班六間分校資訊</h2>
         <p style="text-align: center;">就近選擇，享受至德統一的高品質國小教學！請聯繫各分校以查詢最新開班資訊。</p>
