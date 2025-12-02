@@ -1,5 +1,5 @@
 /* ======================================= */
-/* 至德補習班網站 - 最終深灰 Hero CSS 樣式表 */
+/* 至德補習班網站 - 最終 Hero 顏色修正 CSS 樣式表 */
 /* ======================================= */
 
 /* 1. 全域設定與字體 */
@@ -51,24 +51,25 @@ nav a:hover {
     color: #ff6600; /* 懸停改為橘色 accent */
 }
 
-/* 3. Hero Section (首頁橫幅) - *** 已改成深灰色 *** */
+/* 3. Hero Section (首頁橫幅) - *** 已改成柔和淺灰色 *** */
 .hero {
     text-align: center;
     padding: 120px 20px; 
-    background-color: #3a3a3a; /* 深灰色 */
-    color: white;
+    /* 替換為柔和的淺灰色，並移除漸層 */
+    background-color: #f2f2f2; 
+    color: #333; /* 文字顏色改為深色，確保在淺色背景上可讀 */
 }
 
 .hero h1 {
     font-size: 3.5em; 
-    color: #ffffff; /* 標題改為白色 */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    color: #004d99; /* 標題顏色改為品牌深藍色 */
+    text-shadow: none; /* 移除文字陰影 */
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 1.4em;
-    color: #fff; /* 內文改為白色 */
+    color: #555; /* 內文顏色改為深灰 */
     font-weight: 300;
     margin-bottom: 40px;
 }
@@ -80,7 +81,7 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/* *** 多層次背景顏色定義 (保持不變) *** */
+/* *** 多層次背景顏色定義 (保持交替不變) *** */
 #features {
     background-color: #f7f7f7; /* 核心優勢：淡灰色 */
 }
