@@ -1,104 +1,119 @@
 /* ======================================= */
-/* 至德補習班網站 - 專業 CSS 樣式表 */
+/* 至德補習班網站 - 最終鮮豔版 CSS 樣式表 */
 /* ======================================= */
 
 /* 1. 全域設定與字體 */
 body {
-    font-family: "Microsoft JhengHei", Arial, sans-serif; /* 確保中文字體清晰 */
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333; /* 主要文字顏色 */
-    background-color: #f8f8f8; /* 網站背景淺灰色 */
-    scroll-behavior: smooth; /* 捲動動畫效果 */
+    color: #333;
+    background-color: #f0f3f5; /* 輕微的淺藍灰色背景 */
+    scroll-behavior: smooth;
 }
 
 /* 2. Header (導航欄) */
 header {
-    background-color: #004d99; /* 至德主要品牌藍色 */
+    background-color: #004d99; /* 專業深藍色 */
     color: white;
     padding: 18px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 底部陰影 */
-    position: sticky; /* 固定在頂部 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 更明顯的陰影 */
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.logo {
+.logo a {
+    color: white;
+    text-decoration: none;
     font-size: 1.6em;
     font-weight: 700;
-    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.logo a:hover {
+    color: #ffd700; /* 懸停亮黃色 */
 }
 
 nav a {
     color: white;
     margin: 0 18px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #ffd700; /* 滑鼠懸停時變為亮黃色 */
+    color: #ffd700;
 }
 
 /* 3. Hero Section (首頁橫幅) */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #e0f2ff, #f4f4f4); /* 淺藍色漸變背景 */
+    padding: 120px 20px; /* 增加上下空間 */
+    background: linear-gradient(135deg, #004d99, #007bff); /* 藍色漸變，鮮豔底色 */
+    color: white;
 }
 
 .hero h1 {
-    font-size: 3em;
-    color: #004d99;
-    margin-bottom: 15px;
-    line-height: 1.2;
+    font-size: 3.5em; /* 更大的標題 */
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 增加文字陰影 */
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 30px;
+    font-size: 1.4em;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 40px;
 }
 
 /* 4. Sections (區塊通用設定) */
 .section {
-    padding: 60px 5%;
-    margin-bottom: 0;
+    padding: 80px 5%; /* 增加區塊間距 */
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
+
+/* 交替區塊背景色，增加鮮明對比 */
+#features, #branches, #contact {
+    background-color: #ffffff; 
+}
+#courses {
+    background-color: #e0f0ff; /* 淺藍色背景 */
+}
+
 
 .section h2 {
     text-align: center;
-    font-size: 2.2em;
+    font-size: 2.5em; 
     color: #004d99;
-    margin-bottom: 40px;
-    border-bottom: 3px solid #ffd700; /* 黃色底線強調 */
+    margin-bottom: 50px;
+    border-bottom: 4px solid #FF6600; /* 鮮豔橘色底線強調 */
     display: inline-block;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
 }
 
 /* 5. CTA Button (行動呼籲按鈕) */
 .cta-button {
-    padding: 12px 25px;
-    font-size: 1em;
+    padding: 15px 30px; /* 增加按鈕大小 */
+    font-size: 1.1em; 
     font-weight: 700;
     border: none;
-    border-radius: 5px;
-    transition: transform 0.2s, background-color 0.3s;
-    text-transform: uppercase;
-    margin: 10px;
+    border-radius: 8px; /* 圓角更明顯 */
+    transition: transform 0.3s, opacity 0.3s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px) scale(1.02); /* 更動感的懸停效果 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    opacity: 0.9;
 }
 
 /* 6. Grid Layouts (網格佈局) */
@@ -110,59 +125,76 @@ nav a:hover {
 
 /* 7. Card Style (卡片樣式) */
 .card {
-    padding: 25px;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 提升立體感 */
-    transition: box-shadow 0.3s;
-    text-align: left;
-    background-color: white;
+    padding: 30px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* 柔和但明顯的陰影 */
+    transition: box-shadow 0.3s, transform 0.3s;
+    background-color: #ffffff;
+    border-top: 5px solid #FF6600; /* 頂部使用鮮豔輔色線 */
 }
 
 .card:hover {
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* 懸停效果 */
+    transform: translateY(-5px); /* 輕微上浮效果 */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
 .card h3 {
     color: #004d99;
-    font-size: 1.3em;
-    margin-top: 5px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* 課程/優勢列表樣式 */
+.card ul li {
+    font-size: 1em;
+    padding-left: 5px;
+    border-bottom: 1px dotted #e0e0e0;
+    padding-bottom: 5px;
     margin-bottom: 15px;
 }
 
-/* 8. Course & Branch Specifics */
-.card ul {
-    list-style: none;
-    padding: 0;
+
+/* 8. Branches Dual Buttons (分校雙按鈕) */
+.dual-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.dual-buttons .cta-button {
+    width: 47%;
+    margin: 0;
+    font-size: 0.85em;
+    padding: 10px 5px;
+}
+/* LINE 按鈕特別使用鮮豔綠色 */
+.dual-buttons .cta-button[style*="#00b900"] {
+    background-color: #00b900 !important; 
 }
 
-.card ul li {
-    margin-bottom: 10px;
-    color: #555;
-}
 
-/* 9. Contact Section */
-#contact .cta-button {
-    margin: 10px 15px;
-}
-
-/* 10. Footer (頁尾) */
+/* 9. Footer (頁尾) */
 footer {
-    background-color: #333;
-    color: #ccc;
+    background-color: #222;
+    color: #bbb;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
     font-size: 0.9em;
 }
 
-/* 11. 響應式設計 (RWD - 確保手機瀏覽正常) */
+/* 10. 響應式設計 */
 @media (max-width: 768px) {
-    header { flex-direction: column; }
-    nav { margin-top: 10px; }
-    nav a { margin: 0 10px; display: inline-block; padding: 5px 0; }
-    .hero h1 { font-size: 2em; }
-    .hero { padding: 80px 10px; }
+    .hero h1 { font-size: 2.5em; }
+    .hero p { font-size: 1.1em; }
     .features-grid, .branches-grid {
-        grid-template-columns: 1fr; /* 手機上變為單欄 */
+        grid-template-columns: 1fr;
+    }
+    .dual-buttons {
+        flex-direction: column;
+    }
+    .dual-buttons .cta-button {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
