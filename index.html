@@ -8,12 +8,15 @@
     <style>
         /* 基礎樣式，讓網站在未加裝 CSS 時也能正常閱讀。建議使用專業 CSS 覆蓋。 */
         body { font-family: "Microsoft JhengHei", Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #ffffff; }
-        header { background-color: #004d99; color: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
+        header { background-color: #f7fbfc; color: #004d99; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.5em; font-weight: bold; }
-        .logo a { color: white; text-decoration: none; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
-        .hero { background-color: #f4f4f4; text-align: center; padding: 80px 20px; }
-        .hero h1 { font-size: 2.5em; color: #004d99; }
+        .logo a { color: #004d99; text-decoration: none; }
+        nav a { color: #004d99; margin: 0 15px; text-decoration: none; }
+        
+        /* Hero Section 顏色修正 */
+        .hero { background-color: #f2f2f2; text-align: center; padding: 80px 20px; } 
+        
+        .hero h1 { font-size: 2.5em; color: #004d99; } /* 標題顏色 */
         .section { padding: 40px 5%; margin-bottom: 20px; }
         .features-grid, .branches-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; text-align: center; }
         .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); background-color: white; text-align: left; }
@@ -29,8 +32,8 @@
         
         /* 圖片樣式 (CSS 應該寫在 style.css 中，此處為確保圖片能顯示的內嵌樣式) */
         .card.feature-card { /* 應用於特色區塊的卡片 */
-            padding: 0; 
-            overflow: hidden; 
+            padding: 0; /* 移除內邊距，讓圖片緊貼邊緣 */
+            overflow: hidden; /* 確保圖片不溢出 */
             text-align: left;
         }
         .feature-icon {
@@ -38,7 +41,7 @@
             height: auto;
             max-height: 180px; /* 限制圖片高度 */
             object-fit: cover;
-            border-radius: 8px 8px 0 0; 
+            border-radius: 8px 8px 0 0; /* 圖片頂部圓角與卡片一致 */
             margin-bottom: 15px;
         }
         .card.feature-card h3, .card.feature-card p {
@@ -76,14 +79,6 @@
                  margin-left: auto !important; /* 覆寫行內樣式，確保置中 */
             }
         }
-
-        /* *** Hero Section 顏色修正 *** */
-        .hero {
-            /* 新增更豐富的藍色漸變：深藍 -> 品牌藍 -> 亮藍 */
-            background: linear-gradient(135deg, #022c5e, #004d99, #36a2eb); 
-            text-align: center; 
-            padding: 80px 20px; 
-        }
     </style>
 </head>
 <body>
@@ -102,7 +97,8 @@
 
     <div class="hero">
         <h1>至德補習班：用精準教學，成就孩子的卓越未來！</h1>
-        <p>嘉義 雲林地區國小安親課輔專家，提供 <strong>頂尖文理師資</strong> ✖️ <strong>獨家系統化教材</strong>，陪伴孩子穩固基礎。</p>
+        <p style="color: #004d99;">嘉義 雲林地區國小安親課輔專家，提供 <strong>頂尖文理師資</strong> ✖️ <strong>獨家系統化教材</strong>，陪伴孩子穩固基礎。</p>
+        
         <a href="#branches" class="cta-button" style="background-color: #800080; margin-right: 20px;">🔥 查看各分校據點資訊</a>
         <a href="#contact" class="cta-button cta-flash">預約免費課程試聽</a>
     </div>
