@@ -19,88 +19,61 @@
         .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); background-color: white; text-align: left; }
         .card h3 { color: #004d99; margin-top: 0; }
         .cta-button { color: white; padding: 10px 15px; font-weight: 700; text-decoration: none; border-radius: 5px; display: inline-block; text-align: center; transition: opacity 0.2s;}
-        
         .status-green { color: green; font-weight: bold; }
         .status-yellow { color: orange; font-weight: bold; }
         .status-red { color: red; font-weight: bold; }
         .card ul { list-style: none; padding: 0; }
         .card ul li { margin-bottom: 8px; color: #555; }
-        .dual-buttons { display: flex; justify-content: space-between; margin-top: 20px; } 
-        .dual-buttons .cta-button { width: 48%; margin: 0; font-size: 0.9em; background-color: #ff6600; } 
+        .dual-buttons { display: flex; justify-content: space-between; margin-top: 20px; } /* 新增雙按鈕容器樣式 */
+        .dual-buttons .cta-button { width: 48%; margin: 0; font-size: 0.9em; background-color: #ff6600; } /* 調整卡片內按鈕尺寸 */
         
-        /* 圖片樣式 */
-        .card.feature-card { padding: 0; overflow: hidden; text-align: left; }
-        .feature-icon { width: 100%; height: auto; max-height: 180px; object-fit: cover; border-radius: 8px 8px 0 0; margin-bottom: 15px; }
-        .card.feature-card h3, .card.feature-card p { padding-left: 20px; padding-right: 20px; }
-        .card.feature-card h3 { padding-top: 0; }
-        .card.feature-card p { padding-bottom: 15px; }
-
+        /* 圖片樣式 (CSS 應該寫在 style.css 中，此處為確保圖片能顯示的內嵌樣式) */
+        .card.feature-card { /* 應用於特色區塊的卡片 */
+            padding: 0; /* 移除內邊距，讓圖片緊貼邊緣 */
+            overflow: hidden; /* 確保圖片不溢出 */
+            text-align: left;
+        }
+        .feature-icon {
+            width: 100%;
+            height: auto;
+            max-height: 180px; /* 限制圖片高度 */
+            object-fit: cover;
+            border-radius: 8px 8px 0 0; /* 圖片頂部圓角與卡片一致 */
+            margin-bottom: 15px;
+        }
+        .card.feature-card h3, .card.feature-card p {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .card.feature-card h3 {
+             padding-top: 0;
+        }
+        .card.feature-card p {
+             padding-bottom: 15px;
+        }
 
         /* 閃光動畫 CSS */
         @keyframes flash-glow {
-            0% { box-shadow: 0 0 5px #ff6600, 0 0 10px #ff6600; transform: scale(1); }
-            50% { box-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700; transform: scale(1.05); }
-            100% { box-shadow: 0 0 5px #ff6600, 0 0 10px #ff6600; transform: scale(1); }
+            0% { box-shadow: 0 0 5px #004d99, 0 0 10px #004d99; transform: scale(1); }
+            50% { box-shadow: 0 0 20px #00bfff, 0 0 30px #00bfff; transform: scale(1.05); }
+            100% { box-shadow: 0 0 5px #004d99, 0 0 10px #004d99; transform: scale(1); }
         }
 
         .cta-flash {
             animation: flash-glow 1.5s infinite alternate; 
             margin-left: 20px; 
+            background-color: #004d99 !important; /* 確保按鈕是藍色 */
         }
-
-        /* 彈出視窗 (Modal/Lightbox) 樣式 */
-        .modal {
-            display: none; /* 預設隱藏 */
-            position: fixed;
-            z-index: 100; /* 置於頂層，確保覆蓋所有內容 */
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.8); /* 黑色半透明背景 */
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto; /* 5% 來自頂部，置中 */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%; /* 寬度 */
-            max-width: 900px; /* 最大寬度 */
-            border-radius: 10px;
-            position: relative;
-        }
-
-        .close-button {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            cursor: pointer;
-        }
-
-        .close-button:hover,
-        .close-button:focus {
-            color: #000;
-            text-decoration: none;
-        }
-
-        .camp-images img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        @media screen and (max-width: 768px) {
-            .modal-content {
-                width: 95%; /* 手機上更寬 */
-                margin: 2% auto;
+        
+        /* 手機版 CTA 間距修正 */
+        @media (max-width: 600px) {
+            .hero a.cta-button {
+                display: block; /* 強制按鈕堆疊 */
+                width: 90%; /* 佔滿寬度 */
+                margin: 10px auto; /* 確保垂直間距 */
+            }
+            .cta-flash {
+                 margin-left: auto !important; /* 覆寫行內樣式，確保置中 */
             }
         }
     </style>
@@ -124,7 +97,7 @@
         <h1>至德補習班：用精準教學，成就孩子的卓越未來！</h1>
         <p>嘉義 雲林地區國小安親課輔專家，提供 <strong>頂尖文理師資</strong> ✖️ <strong>獨家系統化教材</strong>，陪伴孩子穩固基礎。</p>
         <a href="#branches" class="cta-button" style="background-color: #e60000; margin-right: 20px;">🔥 查看各分校據點資訊</a>
-        <a href="#contact" class="cta-button cta-flash" style="background-color: #ff6600;">預約免費課程試聽</a>
+        <a href="#contact" class="cta-button cta-flash">預約免費課程試聽</a>
     </div>
 
     <section id="features" class="section">
@@ -161,15 +134,6 @@
                 <p>專為家長設計的安心方案！全日接送、供應午餐、午休管理，下午是多元才藝課與作業指導，讓孩子假期不斷電！</p>
             </div>
         </div>
-    </section>
-
-    <section id="camp" class="section" style="background-color: #f0f0f0; border-top: 5px solid #004d99; text-align: center;">
-        <h2 style="color: #FF6600; border-bottom-color: #004d99; margin-bottom: 20px;">🔥 寒暑假營隊最新資訊 (熱烈報名中！)</h2>
-        <p style="font-size: 1.2em; margin-bottom: 25px;">
-            利用寒暑假集中精華，提供最專業的學科先修與多元探索營隊。<br>
-            名額有限，請盡早預約諮詢，為孩子規劃一個充實的假期！
-        </p>
-        <a href="#" id="open-camp-modal" class="cta-button" style="background-color: #e60000; margin-top: 20px;">2026寒假冬令營時間表與課程</a>
     </section>
 
     <section id="courses" class="section" style="background-color: #f4f4f4;">
@@ -222,6 +186,15 @@
         <p style="text-align: center; margin-top: 30px;"><a href="#contact" class="cta-button" style="background-color: #ff6600;">立即洽詢各班別開課時間</a></p>
     </section>
     
+    <section id="camp" class="section" style="background-color: #f0f0f0; border-top: 5px solid #004d99; text-align: center;">
+        <h2 style="color: #FF6600; border-bottom-color: #004d99; margin-bottom: 20px;">🔥 寒暑假營隊最新資訊 (熱烈報名中！)</h2>
+        <p style="font-size: 1.2em; margin-bottom: 25px;">
+            利用寒暑假，提供最專業的學科先修與多元探索營隊。<br>
+            名額有限，請盡早預約諮詢，為孩子規劃一個充實的假期！
+        </p>
+        <a href="camp_schedule.html" class="cta-button" style="background-color: #e60000; margin-top: 20px;">2026寒假冬令營時間表與課程</a>
+    </section>
+
     <section id="branches" class="section">
         <h2 style="text-align: center;">🏫 我們的據點：至德補習班六間分校資訊</h2>
         <p style="text-align: center;">就近選擇，享受至德統一的高品質國小教學！請聯繫各分校以查詢最新開班資訊。</p>
@@ -292,57 +265,15 @@
 
     <section id="contact" class="section">
         <h2 style="text-align: center;">📞 聯絡我們 / 預約諮詢</h2>
-        <p style="text-align: center;">立即加入官方 LINE 或撥打電話，讓我們為您的孩子規劃最適合的學習藍圖。</p>
+        <p style="text-align: center;">立即撥打電話，讓我們為您的孩子規劃最適合的學習藍圖。</p>
         <div style="text-align: center;">
-            <a href="【請填寫您的LINE官方連結】" class="cta-button" style="background-color: #00b900;">✅ 加入官方 LINE 帳號</a>
-            <a href="tel:【請填寫您的總校諮詢電話】" class="cta-button" style="background-color: #ff6600;">☎️ 總校諮詢專線</a>
+            <a href="tel:052269533" class="cta-button" style="background-color: #ff6600;">☎️ 諮詢專線電話：05-2269533</a>
         </div>
     </section>
 
     <footer>
         <p style="text-align: center; padding: 20px; font-size: 0.8em; color: #666;">© 2024 至德補習班 All Rights Reserved. 嘉義、斗六國小安親課輔專家。</p>
     </footer>
-
-    <div id="campModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h3 style="color: #004d99; text-align: center;">2026 寒假冬令營時間表與課程</h3>
-            <p style="text-align: center; color: #ff6600; font-weight: bold;">請參考以下課程內容：</p>
-            <div class="camp-images">
-                <img src="https://raw.githubusercontent.com/aht760317/jdschool/main/202601.png" alt="2026寒假營隊課程表 part 1">
-                <img src="https://raw.githubusercontent.com/aht760317/jdschool/main/202602.png" alt="2026寒假營隊課程表 part 2">
-            </div>
-            <div style="text-align: center; margin-top: 20px;">
-                 <a href="#contact" class="cta-button" style="background-color: #ff6600;">立即預約諮詢名額</a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var modal = document.getElementById("campModal");
-            var btn = document.getElementById("open-camp-modal");
-            var span = document.getElementsByClassName("close-button")[0];
-
-            // 點擊按鈕開啟 modal
-            btn.onclick = function(e) {
-                e.preventDefault(); // 阻止跳轉到 #
-                modal.style.display = "block";
-            }
-
-            // 點擊 X 關閉 modal
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-
-            // 點擊 modal 外部關閉
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        });
-    </script>
 
 </body>
 </html>
