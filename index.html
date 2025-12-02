@@ -19,37 +19,89 @@
         .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); background-color: white; text-align: left; }
         .card h3 { color: #004d99; margin-top: 0; }
         .cta-button { color: white; padding: 10px 15px; font-weight: 700; text-decoration: none; border-radius: 5px; display: inline-block; text-align: center; transition: opacity 0.2s;}
+        
         .status-green { color: green; font-weight: bold; }
         .status-yellow { color: orange; font-weight: bold; }
         .status-red { color: red; font-weight: bold; }
         .card ul { list-style: none; padding: 0; }
         .card ul li { margin-bottom: 8px; color: #555; }
-        .dual-buttons { display: flex; justify-content: space-between; margin-top: 20px; } /* 新增雙按鈕容器樣式 */
-        .dual-buttons .cta-button { width: 48%; margin: 0; font-size: 0.9em; background-color: #ff6600; } /* 調整卡片內按鈕尺寸 */
+        .dual-buttons { display: flex; justify-content: space-between; margin-top: 20px; } 
+        .dual-buttons .cta-button { width: 48%; margin: 0; font-size: 0.9em; background-color: #ff6600; } 
         
-        /* 圖片樣式 (CSS 應該寫在 style.css 中，此處為確保圖片能顯示的內嵌樣式) */
-        .card.feature-card { /* 應用於特色區塊的卡片 */
-            padding: 0; /* 移除內邊距，讓圖片緊貼邊緣 */
-            overflow: hidden; /* 確保圖片不溢出 */
-            text-align: left;
+        /* 圖片樣式 */
+        .card.feature-card { padding: 0; overflow: hidden; text-align: left; }
+        .feature-icon { width: 100%; height: auto; max-height: 180px; object-fit: cover; border-radius: 8px 8px 0 0; margin-bottom: 15px; }
+        .card.feature-card h3, .card.feature-card p { padding-left: 20px; padding-right: 20px; }
+        .card.feature-card h3 { padding-top: 0; }
+        .card.feature-card p { padding-bottom: 15px; }
+
+
+        /* 閃光動畫 CSS */
+        @keyframes flash-glow {
+            0% { box-shadow: 0 0 5px #ff6600, 0 0 10px #ff6600; transform: scale(1); }
+            50% { box-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700; transform: scale(1.05); }
+            100% { box-shadow: 0 0 5px #ff6600, 0 0 10px #ff6600; transform: scale(1); }
         }
-        .feature-icon {
+
+        .cta-flash {
+            animation: flash-glow 1.5s infinite alternate; 
+            margin-left: 20px; 
+        }
+
+        /* 彈出視窗 (Modal/Lightbox) 樣式 */
+        .modal {
+            display: none; /* 預設隱藏 */
+            position: fixed;
+            z-index: 100; /* 置於頂層，確保覆蓋所有內容 */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8); /* 黑色半透明背景 */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* 5% 來自頂部，置中 */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* 寬度 */
+            max-width: 900px; /* 最大寬度 */
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .camp-images img {
             width: 100%;
             height: auto;
-            max-height: 180px; /* 限制圖片高度 */
-            object-fit: cover;
-            border-radius: 8px 8px 0 0; /* 圖片頂部圓角與卡片一致 */
-            margin-bottom: 15px;
+            display: block;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
-        .card.feature-card h3, .card.feature-card p {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        .card.feature-card h3 {
-             padding-top: 0;
-        }
-        .card.feature-card p {
-             padding-bottom: 15px;
+        @media screen and (max-width: 768px) {
+            .modal-content {
+                width: 95%; /* 手機上更寬 */
+                margin: 2% auto;
+            }
         }
     </style>
 </head>
@@ -117,7 +169,7 @@
             利用寒暑假集中精華，提供最專業的學科先修與多元探索營隊。<br>
             名額有限，請盡早預約諮詢，為孩子規劃一個充實的假期！
         </p>
-        <a href="#contact" class="cta-button" style="background-color: #e60000; margin-top: 20px;">2026寒假 營隊時間表並搶先預約！</a>
+        <a href="#" id="open-camp-modal" class="cta-button" style="background-color: #e60000; margin-top: 20px;">2026寒假冬令營時間表與課程</a>
     </section>
 
     <section id="courses" class="section" style="background-color: #f4f4f4;">
@@ -250,6 +302,47 @@
     <footer>
         <p style="text-align: center; padding: 20px; font-size: 0.8em; color: #666;">© 2024 至德補習班 All Rights Reserved. 嘉義、斗六國小安親課輔專家。</p>
     </footer>
+
+    <div id="campModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 style="color: #004d99; text-align: center;">2026 寒假冬令營時間表與課程</h3>
+            <p style="text-align: center; color: #ff6600; font-weight: bold;">請參考以下課程內容：</p>
+            <div class="camp-images">
+                <img src="https://raw.githubusercontent.com/aht760317/jdschool/main/202601.png" alt="2026寒假營隊課程表 part 1">
+                <img src="https://raw.githubusercontent.com/aht760317/jdschool/main/202602.png" alt="2026寒假營隊課程表 part 2">
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                 <a href="#contact" class="cta-button" style="background-color: #ff6600;">立即預約諮詢名額</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById("campModal");
+            var btn = document.getElementById("open-camp-modal");
+            var span = document.getElementsByClassName("close-button")[0];
+
+            // 點擊按鈕開啟 modal
+            btn.onclick = function(e) {
+                e.preventDefault(); // 阻止跳轉到 #
+                modal.style.display = "block";
+            }
+
+            // 點擊 X 關閉 modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // 點擊 modal 外部關閉
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>
