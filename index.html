@@ -15,17 +15,7 @@
         .hero { background-color: #f4f4f4; text-align: center; padding: 80px 20px; }
         .hero h1 { font-size: 2.5em; color: #004d99; }
         .section { padding: 40px 5%; margin-bottom: 20px; }
-        
-        /* 修正 Features Grid 佈局為 3x2 (共 6 張卡片) */
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; text-align: center; }
-        @media (min-width: 1024px) {
-            .features-grid {
-                grid-template-columns: repeat(3, 1fr); /* 寬螢幕下顯示三欄 */
-            }
-        }
-        .branches-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; text-align: center; }
-
-
+        .features-grid, .branches-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; text-align: center; }
         .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); background-color: white; text-align: left; }
         .card h3 { color: #004d99; margin-top: 0; }
         .cta-button { color: white; padding: 10px 15px; font-weight: 700; text-decoration: none; border-radius: 5px; display: inline-block; text-align: center; transition: opacity 0.2s;}
@@ -73,6 +63,7 @@
             <a href="#features">至德特色</a>
             <a href="#courses">課程體系</a>
             <a href="#branches">分校據點查詢</a>
+            <a href="#camp">營隊資訊</a>
             <a href="#contact">聯絡我們</a>
         </nav>
     </header>
@@ -108,20 +99,16 @@
                 <p>透過趣味實驗與觀察，啟發孩子對自然科學的好奇心，從小培養科學素養，學習充滿樂趣。</p>
             </div>
              <div class="card feature-card" style="text-align: center;">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/2625936388995661115" alt="寒暑假學術營" class="feature-icon">
-                <h3>🏆 寒暑假學術先修營</h3>
-                <p>針對高年級學生，提供國中數學、自然先修課程，結合STEAM探索，達到超前學習與能力培養。</p>
-            </div>
-             <div class="card feature-card" style="text-align: center;">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/6460044712078183090" alt="寒暑假全日照顧" class="feature-icon">
-                <h3>👨‍👩‍👧‍👦 寒暑假全日照顧營</h3>
-                <p>專為家長設計的安心方案！全日接送、供應午餐、午休管理，下午是多元才藝課與作業指導，讓孩子假期不斷電！</p>
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/2625936388995661115" alt="寒暑假營隊" class="feature-icon">
+                <h3>🚀 寒暑假多元營隊</h3>
+                <p>結合STEAM與戶外探索主題，提供寒暑假期間深度、集中式的學習體驗，讓假期充實又有趣。</p>
             </div>
         </div>
     </section>
 
     <section id="courses" class="section" style="background-color: #f4f4f4;">
         <h2 style="text-align: center;">📚 國小課程體系：扎根基礎，快樂學習</h2>
+        <p style="text-align: center; font-weight: bold; font-size: 1.1em; color: #ff6600;">家長的第一選擇 - 至德補習班</p>
         <p style="text-align: center;">至德針對國小學童設計完整學習方案，讓孩子在每個學科都能取得領先。</p>
         
         <div class="features-grid">
@@ -250,4 +237,14 @@
         <h2 style="text-align: center;">📞 聯絡我們 / 預約諮詢</h2>
         <p style="text-align: center;">立即加入官方 LINE 或撥打電話，讓我們為您的孩子規劃最適合的學習藍圖。</p>
         <div style="text-align: center;">
-            <a href="【請填寫您的LINE官方連結】" class="cta-button" style="background-color: #00b900;">✅ 加入官方 LINE 帳
+            <a href="【請填寫您的LINE官方連結】" class="cta-button" style="background-color: #00b900;">✅ 加入官方 LINE 帳號</a>
+            <a href="tel:【請填寫您的總校諮詢電話】" class="cta-button" style="background-color: #ff6600;">☎️ 總校諮詢專線</a>
+        </div>
+    </section>
+
+    <footer>
+        <p style="text-align: center; padding: 20px; font-size: 0.8em; color: #666;">© 2024 至德補習班 All Rights Reserved. 嘉義、斗六國小安親課輔專家。</p>
+    </footer>
+
+</body>
+</html>
