@@ -1,5 +1,5 @@
 /* ======================================= */
-/* 至德補習班網站 - 最終多層次 CSS 樣式表 */
+/* 至德補習班網站 - 最終溫暖交替 CSS 樣式表 */
 /* ======================================= */
 
 /* 1. 全域設定與字體 */
@@ -9,7 +9,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333; /* 主要文字顏色 */
-    background-color: #f0f3f5; /* 輕微的淺藍灰色背景 */
+    background-color: #fcf8f3; /* 網站基礎背景色，溫暖米白色 */
     scroll-behavior: smooth;
 }
 
@@ -80,21 +80,21 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/* *** 多層次背景顏色定義 *** */
+/* *** 溫暖米白交替背景定義 *** */
 #features {
-    background-color: #ffffff; /* 核心優勢：純白 */
+    background-color: #fcf8f3; /* 核心優勢：米白色 (Section 1) */
 }
 #camp {
-    background-color: #e0f8ff; /* 營隊：淺藍/青色 (清新) */
+    background-color: #ffffff; /* 營隊：純白色 (Section 2) */
 }
 #courses {
-    background-color: #f7f7f7; /* 課程體系：淺灰/米白 (柔和) */
+    background-color: #fcf8f3; /* 課程體系：米白色 (Section 3) */
 }
 #branches {
-    background-color: #ffffff; /* 分校據點：純白 */
+    background-color: #ffffff; /* 分校據點：純白色 (Section 4) */
 }
 #contact {
-    background-color: #e0f0ff; /* 聯絡我們：淺藍色 (收尾) */
+    background-color: #fcf8f3; /* 聯絡我們：米白色 (Section 5) */
 }
 
 
