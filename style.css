@@ -1,5 +1,5 @@
 /* ======================================= */
-/* 至德補習班網站 - 最終淡灰背景 CSS 樣式表 */
+/* 至德補習班網站 - 最終淡雅 Header CSS 樣式表 */
 /* ======================================= */
 
 /* 1. 全域設定與字體 */
@@ -13,22 +13,22 @@ body {
     scroll-behavior: smooth;
 }
 
-/* 2. Header (導航欄) */
+/* 2. Header (導航欄) - *** 已依要求修正為淡雅藍色 *** */
 header {
-    background-color: #004d99; /* 專業深藍色 */
-    color: white;
+    background-color: #f7fbfc; /* 極淺淡藍白色 */
+    color: #004d99; /* 將文字顏色改為品牌深藍色，確保可讀性 */
     padding: 18px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 底部陰影 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 調整陰影為淺色系 */
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .logo a {
-    color: white;
+    color: #004d99; /* Logo 顏色改為深藍 */
     text-decoration: none;
     font-size: 1.6em;
     font-weight: 700;
@@ -36,11 +36,11 @@ header {
 }
 
 .logo a:hover {
-    color: #ffd700; /* 懸停亮黃色 */
+    color: #ff6600; /* 懸停改為橘色 accent */
 }
 
 nav a {
-    color: white;
+    color: #004d99; /* 導航文字顏色改為深藍 */
     margin: 0 18px;
     text-decoration: none;
     font-weight: 600;
@@ -48,7 +48,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffd700;
+    color: #ff6600; /* 懸停改為橘色 accent */
 }
 
 /* 3. Hero Section (首頁橫幅) */
@@ -81,7 +81,7 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/* *** 多層次背景顏色定義 (已修正 Section III 為淡灰色) *** */
+/* *** 多層次背景顏色定義 (保持不變) *** */
 #features {
     background-color: #f7f7f7; /* 核心優勢：淡灰色 */
 }
