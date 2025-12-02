@@ -1,5 +1,5 @@
 /* ======================================= */
-/* 至德補習班網站 - 最終顏色修正 CSS 樣式表 */
+/* 至德補習班網站 - 最終淡灰背景 CSS 樣式表 */
 /* ======================================= */
 
 /* 1. 全域設定與字體 */
@@ -55,7 +55,8 @@ nav a:hover {
 .hero {
     text-align: center;
     padding: 120px 20px; 
-    background: linear-gradient(135deg, #004d99, #007bff); /* 藍色漸變，維持專業感 */
+    /* 保持豐富的藍色漸變 */
+    background: linear-gradient(135deg, #022c5e, #004d99, #36a2eb); 
     color: white;
 }
 
@@ -80,9 +81,9 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/* *** 多層次背景顏色定義 (已修正 Section III) *** */
+/* *** 多層次背景顏色定義 (已修正 Section III 為淡灰色) *** */
 #features {
-    background-color: #edf4f7; /* 核心優勢：淺藍灰，與 Hero 形成對比 */
+    background-color: #f7f7f7; /* 核心優勢：淡灰色 */
 }
 #camp {
     background-color: #ffffff; /* 營隊：純白 */
