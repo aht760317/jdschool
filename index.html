@@ -26,6 +26,31 @@
         .card ul li { margin-bottom: 8px; color: #555; }
         .dual-buttons { display: flex; justify-content: space-between; margin-top: 20px; } /* 新增雙按鈕容器樣式 */
         .dual-buttons .cta-button { width: 48%; margin: 0; font-size: 0.9em; background-color: #ff6600; } /* 調整卡片內按鈕尺寸 */
+        
+        /* 圖片樣式 */
+        .card.feature-card { /* 應用於特色區塊的卡片 */
+            padding: 0; /* 移除內邊距，讓圖片緊貼邊緣 */
+            overflow: hidden; /* 確保圖片不溢出 */
+            text-align: left;
+        }
+        .feature-icon {
+            width: 100%;
+            height: auto;
+            max-height: 180px; /* 限制圖片高度 */
+            object-fit: cover;
+            border-radius: 8px 8px 0 0; /* 圖片頂部圓角與卡片一致 */
+            margin-bottom: 15px;
+        }
+        .card.feature-card h3, .card.feature-card p {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .card.feature-card h3 {
+             padding-top: 0;
+        }
+        .card.feature-card p {
+             padding-bottom: 15px;
+        }
     </style>
 </head>
 <body>
@@ -38,6 +63,7 @@
             <a href="#features">至德特色</a>
             <a href="#courses">課程體系</a>
             <a href="#branches">分校據點查詢</a>
+            <a href="#camp">營隊資訊</a>
             <a href="#contact">聯絡我們</a>
         </nav>
     </header>
@@ -52,25 +78,83 @@
     <section id="features" class="section">
         <h2 style="text-align: center;">至德補習班：國小課後教育專家</h2>
         <div class="features-grid">
-            <div class="card" style="text-align: center;">
+            <div class="card feature-card" style="text-align: center;">
+                <img src="images/care.png" alt="國小安親課輔" class="feature-icon">
                 <h3>🏠 安親課輔，全心照護</h3>
                 <p>專為雙薪家庭打造的安心環境，提供專車接送、作業指導，並管理生活常規與品格教育。</p>
             </div>
-            <div class="card" style="text-align: center;">
+            <div class="card feature-card" style="text-align: center;">
+                <img src="images/math.png" alt="國小數學教學" class="feature-icon">
                 <h3>🔢 數學邏輯啟發班</h3>
                 <p>不只教計算，更著重數感與邏輯思維的建立，為國中數學打下最扎實的基礎，讓孩子愛上數學。</p>
             </div>
-            <div class="card" style="text-align: center;">
-                <h3>🇬🇧 沉浸式英文教學</h3>
+            <div class="card feature-card" style="text-align: center;">
+                <img src="images/english.png" alt="沉浸式英文教學" class="feature-icon">
+                <h3>沉浸式英文教學</h3>
                 <p>採用活潑教材，從發音、繪本到會話，讓孩子在無壓力環境下快樂學習英文，奠定語文基礎。</p>
             </div>
-            <div class="card" style="text-align: center;">
+            <div class="card feature-card" style="text-align: center;">
+                <img src="images/science.png" alt="國小自然科學" class="feature-icon">
                 <h3>🔬 自然科學興趣班</h3>
                 <p>透過趣味實驗與觀察，啟發孩子對自然科學的好奇心，從小培養科學素養，學習充滿樂趣。</p>
+            </div>
+             <div class="card feature-card" style="text-align: center;">
+                <img src="images/camp.png" alt="寒暑假營隊" class="feature-icon">
+                <h3>🚀 寒暑假多元營隊</h3>
+                <p>結合STEAM與戶外探索主題，提供寒暑假期間深度、集中式的學習體驗，讓假期充實又有趣。</p>
             </div>
         </div>
     </section>
 
+    <section id="courses" class="section" style="background-color: #f4f4f4;">
+        <h2 style="text-align: center;">📚 國小課程體系：扎根基礎，快樂學習</h2>
+        <p style="text-align: center;">至德針對國小學童設計完整學習方案，讓孩子在每個學科都能取得領先。</p>
+        
+        <div class="features-grid">
+            <div class="card">
+                <h3 style="color: #004d99;">安親課輔班</h3>
+                <ul>
+                    <li>✅ 學校作業檢查與精準指導</li>
+                    <li>✅ 國小放學專車接送服務 (限指定學區)</li>
+                    <li>✅ 養成良好讀書習慣與品格教育</li>
+                    <li>✅ 弱科加強與考前重點複習</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #004d99;">數學專精班</h3>
+                <ul>
+                    <li>✅ 數感訓練：建立數字邏輯與解題思維</li>
+                    <li>✅ 應用加強：專攻應用題與複雜概念</li>
+                    <li>✅ 資優培訓：國小數學資優培訓課程</li>
+                    <li>✅ 超前部署：銜接國中先修課程，無縫接軌</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #004d99;">自然科學班</h3>
+                <ul>
+                    <li>✅ 興趣啟發：透過動手實驗，激發科學好奇心</li>
+                    <li>✅ 觀察記錄：培養細心觀察與數據記錄能力</li>
+                    <li>✅ 科學素養：奠定未來理化、生物的學習基礎</li>
+                    <li>✅ 趣味教學：讓孩子在玩中學，愛上科學</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 style="color: #004d99;">菁英英文班</h3>
+                <ul>
+                    <li>✅ 發音基礎：字母拼讀 (Phonics) 課程</li>
+                    <li>✅ 語文應用：英文發音與會話訓練</li>
+                    <li>✅ 閱讀寫作：繪本閱讀與寫作啟蒙</li>
+                    <li>✅ 穩固文法：奠定未來國中英語文法基礎</li>
+                </ul>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 30px;"><a href="#contact" class="cta-button" style="background-color: #ff6600;">立即洽詢各班別開課時間</a></p>
+    </section>
+    
     <section id="branches" class="section">
         <h2 style="text-align: center;">🏫 我們的據點：至德補習班六間分校資訊</h2>
         <p style="text-align: center;">就近選擇，享受至德統一的高品質國小教學！請聯繫各分校以查詢最新開班資訊。</p>
@@ -139,53 +223,23 @@
         <p style="text-align: center; margin-top: 30px; font-size: 0.9em;">**實際開課與空位狀態，請直接聯繫各分校。**</p>
     </section>
 
-    <section id="courses" class="section" style="background-color: #f4f4f4;">
-        <h2 style="text-align: center;">📚 國小課程體系：扎根基礎，快樂學習</h2>
-        <p style="text-align: center;">至德針對國小學童設計完整學習方案，讓孩子在每個學科都能取得領先。</p>
-        
-        <div class="features-grid">
-            <div class="card">
-                <h3 style="color: #004d99;">安親課輔班</h3>
-                <ul>
-                    <li>✅ 學校作業檢查與精準指導</li>
-                    <li>✅ 國小放學專車接送服務 (限指定學區)</li>
-                    <li>✅ 養成良好讀書習慣與品格教育</li>
-                    <li>✅ 弱科加強與考前重點複習</li>
-                </ul>
+    <section id="camp" class="section" style="background-color: #f0f0f0; border-top: 5px solid #004d99; text-align: center;">
+        <h2 style="color: #FF6600; border-bottom-color: #004d99; margin-bottom: 20px;">🔥 寒暑假營隊最新資訊 (熱烈報名中！)</h2>
+        <p style="font-size: 1.2em; margin-bottom: 25px;">
+            利用寒暑假集中精華，提供最專業的學科先修與多元探索營隊。<br>
+            名額有限，請盡早預約諮詢，為孩子規劃一個充實的假期！
+        </p>
+        <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="card" style="border-top: 3px solid #ffc107; text-align: center;">
+                <h4>🏆 國小資優數學營</h4>
+                <p>針對高年級學生，超前學習國中數學概念，培養高階解題能力。</p>
             </div>
-
-            <div class="card">
-                <h3 style="color: #004d99;">數學專精班</h3>
-                <ul>
-                    <li>✅ 數感訓練：建立數字邏輯與解題思維</li>
-                    <li>✅ 應用加強：專攻應用題與複雜概念</li>
-                    <li>✅ 資優培訓：國小數學資優培訓課程</li>
-                    <li>✅ 超前部署：銜接國中先修課程，無縫接軌</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3 style="color: #004d99;">自然科學班</h3>
-                <ul>
-                    <li>✅ 興趣啟發：透過動手實驗，激發科學好奇心</li>
-                    <li>✅ 觀察記錄：培養細心觀察與數據記錄能力</li>
-                    <li>✅ 科學素養：奠定未來理化、生物的學習基礎</li>
-                    <li>✅ 趣味教學：讓孩子在玩中學，愛上科學</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3 style="color: #004d99;">菁英英文班</h3>
-                <ul>
-                    <li>✅ 發音基礎：字母拼讀 (Phonics) 課程</li>
-                    <li>✅ 語文應用：英文發音與會話訓練</li>
-                    <li>✅ 閱讀寫作：繪本閱讀與寫作啟蒙</li>
-                    <li>✅ 穩固文法：奠定未來國中英語文法基礎</li>
-                </ul>
+             <div class="card" style="border-top: 3px solid #17a2b8; text-align: center;">
+                <h4>🔬 STEAM 科學探索營</h4>
+                <p>有趣的實驗與動手做課程，從科學、科技、工程、藝術、數學全面啟發。</p>
             </div>
         </div>
-
-        <p style="text-align: center; margin-top: 30px;"><a href="#contact" class="cta-button" style="background-color: #ff6600;">立即洽詢各班別開課時間</a></p>
+        <a href="#contact" class="cta-button" style="background-color: #e60000; margin-top: 40px;">🚀 點此查看營隊時間表並搶先預約！</a>
     </section>
 
     <section id="contact" class="section">
