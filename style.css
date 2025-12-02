@@ -1,34 +1,34 @@
 /* ======================================= */
-/* 至德補習班網站 - 專業 CSS 樣式表 */
+/* 至德補習班網站 - 最終導航色彩識別 CSS 樣式表 */
 /* ======================================= */
 
 /* 1. 全域設定與字體 */
 body {
-    font-family: "Microsoft JhengHei", Arial, sans-serif; /* 確保中文字體清晰 */
+    font-family: "Microsoft JhengHei", Arial, sans-serif; 
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333; /* 主要文字顏色 */
-    background-color: #f8f8f8; /* 網站背景淺灰色 */
+    color: #333; 
+    background-color: #f0f3f5; 
     scroll-behavior: smooth;
 }
 
 /* 2. Header (導航欄) */
 header {
-    background-color: #004d99; /* 至德主要品牌藍色 */
-    color: white;
+    background-color: #fff8e1; /* 淡黃色 (保持用戶要求) */
+    color: #004d99; 
     padding: 18px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 底部陰影 */
-    position: sticky; /* 固定在頂部 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .logo a {
-    color: white;
+    color: #004d99; 
     text-decoration: none;
     font-size: 1.6em;
     font-weight: 700;
@@ -36,65 +36,85 @@ header {
 }
 
 .logo a:hover {
-    color: #ffd700; /* 懸停亮黃色 */
+    color: #ff6600; /* 懸停改為橘色 accent */
 }
 
 nav a {
-    color: white;
+    color: #004d99; /* 導航文字顏色改為深藍 */
     margin: 0 18px;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #ffd700;
+/* *** 導航連結的專屬顏色 Hover 效果 *** */
+
+/* 1. 至德特色 (Features) - 藍色/水藍 */
+nav a:nth-child(1):hover {
+    color: #17a2b8;
 }
+
+/* 2. 課程體系 (Courses) - 橘色/紅色 (學術主色) */
+nav a:nth-child(2):hover {
+    color: #ff6600;
+}
+
+/* 3. 分校據點查詢 (Branches) - 鮮綠色 (社區/在地) */
+nav a:nth-child(3):hover {
+    color: #28a745;
+}
+
+/* 4. 聯絡我們 (Contact) - 紫色/桃紅色 (行動呼籲) */
+nav a:nth-child(4):hover {
+    color: #e83e8c;
+}
+/* *** 導航連結的專屬顏色 Hover 效果 結束 *** */
+
 
 /* 3. Hero Section (首頁橫幅) */
 .hero {
     text-align: center;
-    padding: 120px 20px; /* 增加上下空間 */
-    background: linear-gradient(135deg, #004d99, #007bff); /* 藍色漸變，鮮豔底色 */
-    color: white;
+    padding: 120px 20px; 
+    background-color: #f2f2f2; /* 柔和淺灰色 */
+    color: #333; 
 }
 
 .hero h1 {
-    font-size: 3.5em; /* 更大的標題 */
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 增加文字陰影 */
+    font-size: 3.5em; 
+    color: #004d99; 
+    text-shadow: none; 
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 1.4em;
-    color: #fff;
+    color: #555; 
     font-weight: 300;
     margin-bottom: 40px;
 }
 
 /* 4. Sections (區塊通用設定) */
 .section {
-    padding: 80px 5%; /* 增加區塊間距 */
+    padding: 80px 5%; 
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* 交替區塊背景色，增加視覺層次感和舒適感 */
+/* *** 多層次背景顏色定義 (保持交替不變) *** */
 #features {
-    background-color: #ffffff; /* 核心優勢：純白 */
+    background-color: #f7f7f7; 
 }
 #camp {
-    background-color: #e0f8ff; /* 營隊：淺藍/青色 (清新) */
+    background-color: #ffffff; 
 }
 #courses {
-    background-color: #e0f0ff; /* 課程體系：淺藍色背景 */
+    background-color: #edf4f7; 
 }
 #branches {
-    background-color: #ffffff; /* 分校據點：純白 */
+    background-color: #ffffff; 
 }
 #contact {
-    background-color: #e0f0ff; /* 聯絡我們：淺藍色背景 */
+    background-color: #edf4f7; 
 }
 
 
@@ -103,24 +123,24 @@ nav a:hover {
     font-size: 2.5em; 
     color: #004d99;
     margin-bottom: 50px;
-    border-bottom: 4px solid #FF6600; /* 鮮豔橘色底線強調 */
+    border-bottom: 4px solid #FF6600; 
     display: inline-block;
     padding-bottom: 10px;
 }
 
 /* 5. CTA Button (行動呼籲按鈕) */
 .cta-button {
-    padding: 15px 30px; /* 增加按鈕大小 */
+    padding: 15px 30px; 
     font-size: 1.1em; 
     font-weight: 700;
     border: none;
-    border-radius: 8px; /* 圓角更明顯 */
+    border-radius: 8px; 
     transition: transform 0.3s, opacity 0.3s;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
-    transform: translateY(-3px) scale(1.02); /* 更動感的懸停效果 */
+    transform: translateY(-3px) scale(1.02); 
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
     opacity: 0.9;
 }
@@ -137,14 +157,14 @@ nav a:hover {
     padding: 30px;
     border: none;
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* 柔和但明顯的陰影，讓卡片浮起來 */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); 
     transition: box-shadow 0.3s, transform 0.3s;
     background-color: #ffffff;
-    border-top: 5px solid #FF6600; /* 頂部使用鮮豔輔色線 */
+    border-top: 5px solid #FF6600; 
 }
 
 .card:hover {
-    transform: translateY(-5px); /* 輕微上浮效果 */
+    transform: translateY(-5px); 
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
