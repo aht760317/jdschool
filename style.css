@@ -1,5 +1,5 @@
 /* ======================================= */
-/* 至德補習班網站 - 最終 Hero 顏色/對比修正 CSS 樣式表 */
+/* 至德補習班網站 - 丹廬風格參考 CSS 樣式表 */
 /* ======================================= */
 
 /* 1. 全域設定與字體 */
@@ -9,11 +9,11 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333; /* 主要文字顏色 */
-    background-color: #f0f3f5; /* 網站基礎背景色 */
+    background-color: #fcfcfc; /* 網站基礎背景色：非常淺的米白，類似丹廬的整體風格 */
     scroll-behavior: smooth;
 }
 
-/* 2. Header (導航欄) */
+/* 2. Header (導航欄) - 保持淡黃色 */
 header {
     background-color: #fff8e1; /* 淡黃色 */
     color: #004d99; /* 將文字顏色改為品牌深藍色，確保可讀性 */
@@ -51,25 +51,24 @@ nav a:hover {
     color: #ff6600; /* 懸停改為橘色 accent */
 }
 
-/* 3. Hero Section (首頁橫幅) - *** 背景改回深藍，文字改為白色 (高對比) *** */
+/* 3. Hero Section (首頁橫幅) - *** 參考丹廬改為純白色背景，深藍文字 *** */
 .hero {
     text-align: center;
     padding: 120px 20px; 
-    /* 恢復為深藍色漸層 */
-    background: linear-gradient(135deg, #022c5e, #004d99, #36a2eb); 
-    color: white; /* 設置文字的預設顏色為白色 */
+    background-color: #ffffff; /* 純白色背景 */
+    color: #333; /* 文字顏色預設為深色 */
 }
 
 .hero h1 {
     font-size: 3.5em; 
-    color: #ffffff; /* 標題顏色：白色 */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 增加文字陰影，更立體 */
+    color: #004d99; /* 標題顏色改為品牌深藍色，清晰專業 */
+    text-shadow: none; /* 移除文字陰影 */
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 1.4em;
-    color: #ffffff; /* 內文顏色：白色 */
+    color: #555; /* 內文顏色改為深灰 */
     font-weight: 300;
     margin-bottom: 40px;
 }
@@ -81,21 +80,21 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/* *** 多層次背景顏色定義 (保持交替不變) *** */
+/* *** 多層次背景顏色定義 (調整為白色與淺米白交替) *** */
 #features {
-    background-color: #f7f7f7; /* 核心優勢：淡灰色 */
+    background-color: #ffffff; /* 核心優勢：純白 */
 }
 #camp {
-    background-color: #ffffff; /* 營隊：純白 */
+    background-color: #fcfcfc; /* 營隊：淺米白 */
 }
 #courses {
-    background-color: #edf4f7; /* 課程體系：淺藍灰 */
+    background-color: #ffffff; /* 課程體系：純白 */
 }
 #branches {
-    background-color: #ffffff; /* 分校據點：純白 */
+    background-color: #fcfcfc; /* 分校據點：淺米白 */
 }
 #contact {
-    background-color: #edf4f7; /* 聯絡我們：淺藍灰 */
+    background-color: #ffffff; /* 聯絡我們：純白 */
 }
 
 
@@ -140,7 +139,7 @@ nav a:hover {
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* 柔和但明顯的陰影，讓卡片浮起來 */
     transition: box-shadow 0.3s, transform 0.3s;
-    background-color: #ffffff;
+    background-color: #ffffff; /* 卡片背景為純白 */
     border-top: 5px solid #FF6600; /* 頂部使用鮮豔輔色線 */
 }
 
