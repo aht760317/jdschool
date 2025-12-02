@@ -1,5 +1,5 @@
 /* ======================================= */
-/* 至德補習班網站 - 最終 Header 顏色修正 CSS 樣式表 */
+/* 至德補習班網站 - 最終確認 CSS 樣式表 */
 /* ======================================= */
 
 /* 1. 全域設定與字體 */
@@ -13,7 +13,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* 2. Header (導航欄) - *** 已依要求修正為淡黃色 *** */
+/* 2. Header (導航欄) - *** 淡黃色背景 *** */
 header {
     background-color: #fff8e1; /* 淡黃色 */
     color: #004d99; /* 將文字顏色改為品牌深藍色，確保可讀性 */
@@ -51,12 +51,11 @@ nav a:hover {
     color: #ff6600; /* 懸停改為橘色 accent */
 }
 
-/* 3. Hero Section (首頁橫幅) */
+/* 3. Hero Section (首頁橫幅) - *** 柔和淺灰色背景 *** */
 .hero {
     text-align: center;
     padding: 120px 20px; 
-    /* 保持柔和的淺灰色，與Header形成對比 */
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2; /* 柔和淺灰色 */
     color: #333; /* 文字顏色改為深色 */
 }
 
