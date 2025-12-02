@@ -1,5 +1,5 @@
 /* ======================================= */
-/* 至德補習班網站 - 清新專業 CSS 樣式表 */
+/* 至德補習班網站 - 最終多層次 CSS 樣式表 */
 /* ======================================= */
 
 /* 1. 全域設定與字體 */
@@ -9,7 +9,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333; /* 主要文字顏色 */
-    background-color: #f0f3f5; /* 輕微的淺藍灰色背景 (清新舒適) */
+    background-color: #f0f3f5; /* 輕微的淺藍灰色背景 */
     scroll-behavior: smooth;
 }
 
@@ -75,20 +75,26 @@ nav a:hover {
 
 /* 4. Sections (區塊通用設定) */
 .section {
-    padding: 80px 5%; 
+    padding: 80px 5%; /* 增加區塊間距 */
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* 交替區塊背景色，增加視覺層次感和舒適感 */
-#features, #branches, #contact {
-    background-color: #ffffff; /* 白色背景 */
-}
-#courses {
-    background-color: #e0f0ff; /* 淺藍色背景 (清新) */
+/* *** 多層次背景顏色定義 *** */
+#features {
+    background-color: #ffffff; /* 核心優勢：純白 */
 }
 #camp {
-    background-color: #f0f0f0; /* 淺灰色背景 */
+    background-color: #e0f8ff; /* 營隊：淺藍/青色 (清新) */
+}
+#courses {
+    background-color: #f7f7f7; /* 課程體系：淺灰/米白 (柔和) */
+}
+#branches {
+    background-color: #ffffff; /* 分校據點：純白 */
+}
+#contact {
+    background-color: #e0f0ff; /* 聯絡我們：淺藍色 (收尾) */
 }
 
 
@@ -138,7 +144,7 @@ nav a:hover {
 }
 
 .card:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px); /* 輕微上浮效果 */
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
