@@ -11,7 +11,8 @@
         header { background-color: #004d99; color: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.5em; font-weight: bold; }
         .logo a { color: white; text-decoration: none; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        /* 導航列已移除 '營隊資訊' */
+        nav a { color: white; margin: 0 15px; text-decoration: none; } 
         .hero { background-color: #f4f4f4; text-align: center; padding: 80px 20px; }
         .hero h1 { font-size: 2.5em; color: #004d99; }
         .section { padding: 40px 5%; margin-bottom: 20px; }
@@ -27,10 +28,10 @@
         .dual-buttons { display: flex; justify-content: space-between; margin-top: 20px; } /* 新增雙按鈕容器樣式 */
         .dual-buttons .cta-button { width: 48%; margin: 0; font-size: 0.9em; background-color: #ff6600; } /* 調整卡片內按鈕尺寸 */
         
-        /* 圖片樣式 (CSS 應該寫在 style.css 中，此處為確保圖片能顯示的內嵌樣式) */
+        /* 圖片樣式 */
         .card.feature-card { /* 應用於特色區塊的卡片 */
-            padding: 0; /* 移除內邊距，讓圖片緊貼邊緣 */
-            overflow: hidden; /* 確保圖片不溢出 */
+            padding: 0; 
+            overflow: hidden; 
             text-align: left;
         }
         .feature-icon {
@@ -38,7 +39,7 @@
             height: auto;
             max-height: 180px; /* 限制圖片高度 */
             object-fit: cover;
-            border-radius: 8px 8px 0 0; /* 圖片頂部圓角與卡片一致 */
+            border-radius: 8px 8px 0 0; 
             margin-bottom: 15px;
         }
         .card.feature-card h3, .card.feature-card p {
@@ -52,17 +53,17 @@
              padding-bottom: 15px;
         }
 
-        /* 閃光動畫 CSS */
+        /* 閃光動畫 CSS - *** 已修改為紅色系閃爍 *** */
         @keyframes flash-glow {
-            0% { box-shadow: 0 0 5px #004d99, 0 0 10px #004d99; transform: scale(1); }
-            50% { box-shadow: 0 0 20px #00bfff, 0 0 30px #00bfff; transform: scale(1.05); }
-            100% { box-shadow: 0 0 5px #004d99, 0 0 10px #004d99; transform: scale(1); }
+            0% { box-shadow: 0 0 5px #e60000, 0 0 10px #e60000; transform: scale(1); }
+            50% { box-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc00; transform: scale(1.05); } 
+            100% { box-shadow: 0 0 5px #e60000, 0 0 10px #e60000; transform: scale(1); }
         }
 
         .cta-flash {
             animation: flash-glow 1.5s infinite alternate; 
             margin-left: 20px; 
-            background-color: #004d99 !important; /* 確保按鈕是藍色 */
+            background-color: #e60000 !important; /* 確保按鈕是紅色 */
         }
         
         /* 手機版 CTA 間距修正 */
@@ -87,7 +88,6 @@
         <nav>
             <a href="#features">至德特色</a>
             <a href="#courses">課程體系</a>
-            <a href="#camp">營隊資訊</a>
             <a href="#branches">分校據點查詢</a>
             <a href="#contact">聯絡我們</a>
         </nav>
@@ -96,7 +96,7 @@
     <div class="hero">
         <h1>至德補習班：用精準教學，成就孩子的卓越未來！</h1>
         <p>嘉義 雲林地區國小安親課輔專家，提供 <strong>頂尖文理師資</strong> ✖️ <strong>獨家系統化教材</strong>，陪伴孩子穩固基礎。</p>
-        <a href="#branches" class="cta-button" style="background-color: #e60000; margin-right: 20px;">🔥 查看各分校據點資訊</a>
+        <a href="#branches" class="cta-button" style="background-color: #800080; margin-right: 20px;">🔥 查看各分校據點資訊</a>
         <a href="#contact" class="cta-button cta-flash">預約免費課程試聽</a>
     </div>
 
@@ -267,7 +267,7 @@
         <h2 style="text-align: center;">📞 聯絡我們 / 預約諮詢</h2>
         <p style="text-align: center;">立即撥打電話，讓我們為您的孩子規劃最適合的學習藍圖。</p>
         <div style="text-align: center;">
-            <a href="tel:052269533" class="cta-button" style="background-color: #ff6600;">☎️ 諮詢專線電話：05-2269533</a>
+            <a href="tel:052269533" class="cta-button" style="background-color: #e60000;">☎️ 諮詢專線電話：05-2269533</a>
         </div>
     </section>
 
